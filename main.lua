@@ -2,7 +2,7 @@ local pass = PCrypt.sha3(...)
 local clientList = {}
 sockets.host("pass")
 
-local devices = {
+local devices = {"modem", "computer", "turtle", "drive", "monitor", "printer"}
     
 
 local function join()
