@@ -2,8 +2,7 @@ local pass = PCrypt.sha3(...)
 local clientList = {}
 sockets.host("pass")
 
-local devices = {"modem", "computer", "turtle", "drive", "monitor", "printer"}
-    
+local devices = {modem = true, computer = true, turtle = true, drive = true, monitor = true, printer = true}
 
 local function join()
     while true do
@@ -24,8 +23,8 @@ local function getConnected(allowUnknown)
     local rList = {}
     for k, client in ipairs(clientList) do
         local hosted = client.ask("GET HOSTED VPN", "string")
-        local devices = {}
-        for dev in hosted:find("([^\n]*)\n?") do
-            if dev["
+        local devices = {
+            if devices[type] then
+            
         rList[k] = {
             
